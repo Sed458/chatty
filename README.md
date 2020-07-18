@@ -1,3 +1,7 @@
+# Chatty
+### Project in live [here](https://enigmatic-taiga-18831.herokuapp.com/).
+Deployed on Heroku
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
