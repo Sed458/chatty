@@ -10,7 +10,6 @@ import Chat from './pages/Chat';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import { auth } from './services/firebase';
-import { signup } from './helpers/auth';
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
   return (
@@ -62,8 +61,7 @@ class App extends Component {
   }
 
   render() {
-    return (
-    // return this.state.loading === true ? <h2>Loading...</h2> : (
+    return this.state.loading === true ? <h2>Loading...</h2> : (
       <Router>
         <Switch>
           <Route exact path="/" component={Home}></Route>
@@ -72,8 +70,7 @@ class App extends Component {
           <PublicRoute path="/login" authenticated={this.state.authenticated} component={Login}></PublicRoute>
         </Switch>
       </Router>
-    // );
-    )
+    );
   }
 }
 
